@@ -12,6 +12,9 @@
     <strong>Email:</strong> {{$email}}
 </p>
 <p>
+    <strong>phone:</strong> {{$phone}}
+</p>
+<p>
     <strong>Guest:</strong> {{$guest}}
 </p>
 <p>
