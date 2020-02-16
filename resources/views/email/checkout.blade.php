@@ -24,16 +24,16 @@
   <thead>
     <tr>
       <th>
-        PRODUCT NAME
+        NAME
       </th>
       <th>
-        PRODUCT CATEGORY
+        CATEGORY
       </th>
       <th>
-        PRODUCT PRICE
+        PRICE
       </th>
       <th>
-        PRODUCT QUANTITY
+        QUANTITY
       </th>
     </tr>
   </thead>

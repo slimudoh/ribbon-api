@@ -16,11 +16,17 @@ class EmailController extends Controller
       $tag = $request->input('tag');
 
       try {
-            $data = array('fname' => $fname, 'email' => $email, 'phone' => $phone, 'guest' => $guest, 'msg' => $msg, 'tag' => $tag);
+            $data = array(
+              'fname' => $fname,
+              'email' => $email,
+              'phone' => $phone,
+              'guest' => $guest,
+              'msg' => $msg,
+              'tag' => $tag
+            );
 
               Mail::send('email.rsvp', $data, function ($m) use ($data) {
                   $m->from($data['email'], $data['fname']);
-                  // $m->to("ourloveribbons@gmail.com", "Ribbon web")->subject('New Message for Ribbon web!');
                   $m->to(env('RIBBON_EMAIL'), "Ribbon web")->subject('New Message for Ribbon web!');
               });
 
@@ -47,7 +53,7 @@ class EmailController extends Controller
       $phone = $request->input('phone');
       $country = $request->input('country');
       $paystack_ref = $request->input('paystackRef');
-      $tag = $request->input('teg');
+      $tag = $request->input('tag');
 
       try {
             $data = array(
